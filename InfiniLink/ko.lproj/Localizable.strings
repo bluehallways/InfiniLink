@@ -7,10 +7,6 @@
 */
 
 // - HomeScreen
-"device_information" = "기기 정보";
-"firmware_version" = "펌웨어 버전: ";
-"model" = "모델: ";
-"update_stats" = "업타임 상태";
 "last_disconnect" = "마지막 연결 해제: ";
 "uptime" = "마지막 연결: ";
 "step_count" = "걸음 수";
@@ -19,6 +15,8 @@
 "no_updates_available" = "사용 가능한 업데이트가 없어요";
 "device_name" = "기기 이름";
 "rename" = "이름 바꾸기";
+"disconnect_alert_title" = "Are you sure you want to disconnect from this device?";
+"save" = "Save";
 
 // - SideMenu
 "home" = "홈";
@@ -35,9 +33,12 @@
 // - HeartChart
 "bpm" = "BPM";
 "insufficient_heart_rate_data" = "심박수 정보 부족함";
+"heart_rate_settings" = "Heart Rate Settings";
+"oops" = "Oops!";
 
 // - BetteryChart
 "insufficient_battery_data" = "배터리 정보 부족함";
+"battery_stats" = "Battery Stats";
 
 // - StepsView
 "week" = "주";
@@ -66,29 +67,48 @@
 "enable_watch_notifications" = "워치 알림 표시하기";
 "notify_about_low_battery" = "낮은 배터리 알리기";
 "send_notification_to_pinetime" = "PineTime에 알림 보내기";
+"find_lost_device" = "Find Lost";
 "graph_styles" = "그래프 스타일";
 "filled_hrm_graph" = "심박수 그래프 채우기";
 "filled_battery_graph" = "배터리 그래프 채우기";
+"enable_first_connect_notification" = "Notify on First Connect";
 "graph_data" = "그래프 데이터";
 "clear_all_hrm_chart_data" = "심박수 차트 데이터 삭제";
+"clear_all_steps_chart_data" = "Clear All Steps Chart Data";
 "clear_all_battery_chart_data" = "배터리 차트 데이터 삭제";
+"clear_chart_data_alert_title" = "Are you sure you want to clear all of the selected chart's data?";
 "onboarding_information" = "짧은 정보";
 "open_onboarding_page" = "짧은 정보 페이지 열기";
 "whats_new_page_this_version" = "이 버전의 '새로운 기능' 페이지 열기";
 "debug_mode" = "디버그 모드";
 "enable_debug_mode" = "디버그 모드 활성화";
 "debug_logs" = "디버그 로그";
+"no_logs" = "No Logs";
 "links" = "링크";
 "donations" = "후원";
-
-// - ScanningPopover
-"connected_to" = "기기에 연결됨:";
-"scanning" = "스캔 중";
+"copy" = "Copy";
+"weather" = "Weather";
+"weather_style" = "Weather Style";
+"search_for_locations" = "Search for Locations";
+"find_location" = "Use the search box above to find\na location";
+"update_step_count_goal_on_watch_1" = "To change your step goal, navigate to settings on";
+"update_step_count_goal_on_watch_2" = "and change it there.";
+"manually_sync_time" = "Manually Sync Time";
 
 // - BLEConnectView
 "available_devices" = "사용 가능한 기기";
 "waiting_for_bluetooth" = "블루투스 대기 중";
 "unnamed" = "이름 없음";
+"loading" = "";
+"need_help_connecting" = "";
+"devices" = "";
+"not_infinitime_device" = "It doesn't look like the device you selected is running InfiniTime.";
+"disconnect" = "연결 해제";
+"scanning" = "스캔 중";
+"ok" = "OK";
+
+// - ConnectionHelpView
+"connection_help" = "";
 
 // - ChartSettingsSheetMain
 "select_date_range" = "날짜 범위 선택";
@@ -118,7 +138,7 @@
 "add_steps" = "걸음 수 추가";
 
 // - StepSettingsSheetGoalChange
-"change_step_count_goal" = "목표 걸음 수 변경";
+"change_step_goal" = "목표 걸음 수 변경";
 "enter_step_goal" = "목표 걸음 수를 입력하세요";
 "submit_new_step_goal" = "새 목표 걸음 수 저장";
 
@@ -131,30 +151,26 @@
 // - DownloadView
 "available_downloads" = "사용 가능한 다운로드";
 "firmware_download_links" = "펌웨어 다운로드 링크";
-
-// - SheetCloseButton
-"close" = "닫기";
+"software_update_available" = "Software Update Available";
 
 // - WhatsNew
 "whats_new_in" = "What's New in";
 "welcome_to_version" = "Welcome to version";
-"welcome_text" = "이것이 InfiniLink의 마지막 업데이트가 될 것이라고 유감스럽게 생각합니다. 나는 몇 달 전에 새로운 일을 시작했고 더 이상이 프로젝트의 개발을 계속할 여가 시간이 없습니다. 누구든지 인수에 관심이 있다면, 알려 주시면 모든 것을 양도 할 수 있습니다. 길을 따라 모든 지원과 제안에 감사드립니다!";
-
-// - WhatsNewBody
-"whats_new_body_1" = "- 한국어와 프랑스어 현지화 병합";
-"whats_new_body_2" = "";
-"whats_new_body_3" = "";
+"whats_new_1" = "The UI has been completely refreshed!";
+"whats_new_2" = "Apple HealthKit is now supported to sync step count and heart rate data with Apple Health.";
+"whats_new_3" = "InfiniLink users can now upload and delete files on their watch's Bluetooth filesystem, as well as upload external resource packages. Users can also convert images to the format supported by InfiniTime, within the app.";
+"whats_new_4" = "Weather support has also been added in this release, using the National Weather Service API (for users inside the United States) and the WeatherAPI API (for users outside of the United States). The weather data is pushed using InfiniTime's new Simple Weather Service. Requires InfiniTime 1.14 or newer.";
+"whats_new_5" = "This release also contains some new localizations. Please note that not all the localizations are complete. If you're able to assist with them, please feel free to submit a pull request with the updated localizations!";
+"whats_new_6" = "Special thanks to @JenJell on GitHub for for all of her help with this update!";
 
 // - Onboarding
-"welcome_to_InfiniLink" = "🎉 Welcome to InfiniLink! 🎉";
-"onboarding_text" = "I'm thrilled you're willing and able to test out this beta version of my iOS companion app for InfiniTime! Before you begin, make sure to allow this app to use Bluetooth. Please report any issues that you find, crashes you experience, or suggested changes to me! Your feedback allows you and me to work together to have a great companion app. Reports are welcome through TestFlight, or through GitHub, Matrix, or Mastodon (links are available in the settings tab).";
-
-// - OnboardingBody
+"welcome_to_InfiniLink" = "Welcome to InfiniLink!";
+"onboarding_text" = "The official open-source iOS companion app for InfiniTime! Before you begin, make sure to allow this app to use Bluetooth. Please report any issues that you find, crashes you experience, or suggested changes! Your feedback allows us to work together to have a great companion app. Reports are welcome through TestFlight, or through GitHub, Matrix, or Mastodon.";
 "other_notes" = "Other notes:";
-"other_notes_1" = "- Notifications are not currently functional, as this requires the Apple Notification Center Service (ANCS) protocol to be implemented in InfiniTime.";
-"other_notes_2" = "- The music controls do work in InfiniTime, but only if you're playing music through the Apple Music app. System-wide music control in iOS requires the proprietary Apple Media Service to be implemented in InfiniTime. At the app level, I can really only interact with Apple Music, and have no control over podcasts, YouTube videos, system volume, etc. until AMS is added to InfiniTime.";
-"other_notes_3" = "- Your PineTime is only capable of sustaining one Bluetooth connection at a time. If you're having trouble connecting, please ensure that your PineTime is not already connected to another device, or to another app on this device.";
-"other_notes_4" = "- If your PineTime is still not showing up as an available device, please reboot your watch by holding down the side button on your watch until you see the Pine64 pinecone logo in green, and then release. There is currently an issue with Bluetooth advertising in Infinitime that the developers are working extremely hard on. Wish them luck!";
+"other_notes_1" = "Notifications are not currently functional, as this requires the Apple Notification Center Service (ANCS) protocol to be implemented in InfiniTime.";
+"other_notes_2" = "The music controls do work in InfiniTime, but only if you're playing music through the Apple Music app. System-wide music control in iOS requires the proprietary Apple Media Service to be implemented in InfiniTime. At the app level, I can really only interact with Apple Music, and have no control over podcasts, YouTube videos, etc. until AMS is added to InfiniTime.";
+"other_notes_3" = "Your InfiniTime device is currently only capable of sustaining one Bluetooth connection at a time. If you're having trouble connecting, please ensure that your PineTime is not already connected to another device, or to another app on this device.";
+"other_notes_4" = "If your PineTime is still not showing up as an available device, please reboot your watch by holding down the side button on your watch until you see the Pine64 pinecone logo in green, and then release.";
 
 // - OnboardingDismissButton
 "dismiss_button" = "완료";
@@ -164,6 +180,15 @@
 "current_firmware" = "현재 펌웨어";
 "firmware_file" = "펌웨어 파일";
 "clear" = "Clear";
+"update_requirement_1" = "To update, please make sure ";
+"update_requirement_2" = "'s battery level is over 30 percent";
+
+"not_release_builds" = "WARNING: These are not release builds! Install at your own risk.";
+"use_external_resources" = "Use External Resources";
+"use_software_update" = "Use Software Update";
+"releases" = "Releases";
+"pr_title" = "PR";
+"pull_requests" = "GitHub Pull Requests";
 
 // - DFUWithoutBLE
 "bluetooth_not_available" = "블루투스 사용 불가능";
@@ -190,11 +215,6 @@
 // - MusicController
 "not_playing" = "Not Playing";
 
-// - SideMenu
-"disconnect" = "연결 해제";
-"scanning" = "스캔 중";
-"connect" = "연결";
-
 // - ContentView
 "failed_set_time" = "시간 설정 실패";
 "failed_set_time_description" = "시간을 설정하는데 오류가 있었습니다. 시계를 연결 해제한 후 다시 연결해주세요.";
@@ -211,6 +231,7 @@
 "welcome_text" = "";
 "connecting" = "";
 "start_pairing" = "";
+"stop_connecting" = "";
 "my_device" = "";
 "favorites" = "";
 "app_settings" = "";
@@ -229,6 +250,8 @@
 "pinetime_not_available" = "";
 "please_check_your_connection_and_try_again" = "";
 "download_and_install" = "";
+"recovery_mode" = "It looks your device is in Recovery Mode.";
+"exit_recovery_mode" = "To exit Recovery Mode, you need to install a software update.";
 
 "battery_level" = "";
 "battery_usage" = "";
@@ -239,7 +262,36 @@
 "currently_unavailable" = "";
 
 "software_version" = "";
+"file_system_version" = "File System Version";
 "model_name" = "";
 "autoconnect_to_this" = "";
 "send_notification_to" = "";
 "connected_to" = "";
+
+"file_system" = "File System";
+"update_external_resources" = "Update External Resources";
+"external_resources_info" = "External resources are fonts and images stored in a seperate location on the watch to optimize storage and memory usage.";
+"success" = "Success!";
+"upload_files" = "Upload Files";
+"upload_selected_files" = "Upload Selected File(s)";
+"new_folder" = "New Folder";
+"create_folder" = "Create Folder";
+"delete" = "Delete";
+"unknown" = "Unknown";
+"back" = "Back";
+"watch_settings" = "Watch Settings";
+"display_timeout" = "Display Timeout";
+"time_format" = "Time Format";
+"hourly_chimes" = "Hourly Chimes";
+"brightness_level" = "Brightness Level";
+
+"enable_weather_data" = "Enable Weather Data";
+"use_current_location" = "Use Current Location";
+"set_location" = "Location";
+"always_allow_location_services" = "Always Allow Current Location";
+"loading_weather" = "Loading weather...";
+
+"youre_offline" = "You're offline";
+"offline_desc" = "You're offline. Please connect to the internet to continue.";
+"offline" = "Offline...";
+

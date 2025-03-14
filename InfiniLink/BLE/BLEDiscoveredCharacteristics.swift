@@ -8,12 +8,16 @@
     
 
 import CoreBluetooth
+import UIKit
+import SwiftUI
 
 struct BLEDiscoveredCharacteristics {
 	let bleManager = BLEManager.shared
     let bleManagerVal = BLEManagerVal.shared
+    
+    @AppStorage("sendFirstConnectNotification") var sendFirstConnectNotification: Bool = true
+    
 	func handleDiscoveredCharacteristics(characteristic: CBCharacteristic, peripheral: CBPeripheral) {
-		
 		switch characteristic.uuid {
 		case bleManagerVal.cbuuidList.musicControl:
 			peripheral.setNotifyValue(true, for: characteristic)
@@ -33,21 +37,23 @@ struct BLEDiscoveredCharacteristics {
 		case bleManagerVal.cbuuidList.bat:
 			peripheral.readValue(for: characteristic)
 			peripheral.setNotifyValue(true, for: characteristic)
+        case bleManagerVal.cbuuidList.blefsTransfer:
+            bleManager.blefsTransfer = characteristic
+            peripheral.setNotifyValue(true, for: characteristic)
 		case bleManagerVal.cbuuidList.notify:
             bleManagerVal.notifyCharacteristic = characteristic
-			if bleManager.firstConnect {
-				BLEWriteManager.init().sendNotification(title: "", body: "iOS Connected!")
+			if bleManager.firstConnect && sendFirstConnectNotification {
+                BLEWriteManager.init().sendNotification(title: "", body: "\(UIDevice.current.name) Connected!")
                 bleManager.firstConnect = false
 			}
 		case bleManagerVal.cbuuidList.stepCount:
 			peripheral.readValue(for: characteristic)
 			peripheral.setNotifyValue(true, for: characteristic)
 		case bleManagerVal.cbuuidList.time:
-			do {
-				try peripheral.writeValue(SetTime().currentTime().hexData, for: characteristic, type: .withResponse)
-			} catch {
-                bleManager.setTimeError = true
-			}
+            bleManager.currentTimeService = characteristic
+            BLEWriteManager.init().setTime(characteristic: characteristic)
+        case bleManagerVal.cbuuidList.weather:
+            bleManagerVal.weatherCharacteristic = characteristic
 		default:
 			break
 		}

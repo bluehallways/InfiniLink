@@ -1,22 +1,49 @@
-# InfiniLink - an InfiniTime Companion App for iOS
+<br>
 
-This iOS application allows you to interact with your PineTime smartwatch running [InfiniTime](https://github.com/JF002/InfiniTime) (and perhaps other watches/OSes, pending testing).
+<div align="center">
+  
+[![Build & Analyze](https://github.com/InfiniTimeOrg/InfiniLink/actions/workflows/objective-c-xcode.yml/badge.svg)](https://github.com/InfiniTimeOrg/InfiniLink/actions/workflows/objective-c-xcode.yml)
+[![Platforms](https://img.shields.io/badge/platforms-iOS-333333.svg)](https://github.com/InfiniTimeOrg/InfiniLink)
+[![GitHub tag](https://img.shields.io/github/tag/InfiniTimeOrg/InfiniLink?include_prereleases=&sort=semver&color=blue)](https://github.com/InfiniTimeOrg/InfiniLink/releases)
+[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/InfiniTimeOrg/InfiniLink/blob/main/LICENSE)
+[![Issues - InfiniLink](https://img.shields.io/github/issues/InfiniTimeOrg/InfiniLink)](https://github.com/InfiniTimeOrg/InfiniLink/issues)
+[![Pull Requests - InfiniLink](https://img.shields.io/github/issues-pr/InfiniTimeOrg/InfiniLink)](https://github.com/InfiniTimeOrg/InfiniLink/pulls)
+[![Stars - InfiniLink](https://img.shields.io/github/stars/InfiniTimeOrg/InfiniLink?style=social)](https://github.com/InfiniTimeOrg/InfiniLink/stargazers)
+[![Forks - InfiniLink](https://img.shields.io/github/forks/InfiniTimeOrg/InfiniLink?style=social)](https://github.com/InfiniTimeOrg/InfiniLink/network/members)
 
-### What works:
-- Scan nearby devices and connect to PineTimes
+<br>
+
+<img src="InfiniLink/Assets.xcassets/AppIcon-3.appiconset/icon_1024.png" width="115" height="115">
+
+# InfiniLink - The official iOS companion app for InfiniTime
+
+This iOS application allows you to interact with your PineTime smartwatch running [InfiniTime](https://github.com/InfiniTimeOrg/InfiniTime) (and perhaps other watches/OSes, pending testing).
+
+</div>
+
+> [!NOTE]
+> This branch is not under active development. Please refer to the [rebuild](https://github.com/InfiniTimeOrg/InfiniLink/tree/rebuild) branch instead.
+
+### Features:
+- Discover and connect to nearby InfiniTime devices
 - Set time and date immediately after connection
-- Read and chart battery level data and heart rate data from watch
-- Chart persistence, with filters for last hour, last day, and last week
-- Music controls on InfiniTime can control Apple Music.
-- Step counter with current step count, weekly chart, and monthly calendar
-- Check for updates to InfiniTime using the GitHub API, download them directly with the app, and send them to the PineTime. 
-    - Manual updates can be completed with DFU zip files downloaded from [InfiniTime's GitHub Releases Page](https://github.com/JF002/InfiniTime/releases)
+- Retrieve battery level, heart rate, and step data
+- Control Apple Music with InfiniTime's music controls
+- Integration with Apple HealthKit
+- Weather fetch (using WeatherKit) and push (using InfiniTime 1.14's [Simple Weather Service](https://github.com/InfiniTimeOrg/InfiniTime/blob/main/doc/SimpleWeatherService.md))
+- Uploading of [external resource packages](https://github.com/InfiniTimeOrg/InfiniTime/blob/develop/doc/gettingStarted/updating-software.md#updating-resources)
+- Check for and download InfiniTime firmware updates with the GitHub API, and send them to the watch (Manual updates can be completed with DFU zip files downloaded from [InfiniTime's GitHub Releases Page](https://github.com/InfiniTimeOrg/InfiniTime/releases))
 
-### What doesn't work (yet):
-- InfiniTime's navigation app. As far as I can tell, there is no API in Swift to access current directions, so this will likely never work unless it's added into a mapping application.
-- Music controls for anything other than Apple Music -- This requires Apple Music Service (AMS) to be implemented in InfiniTime.
-- Phone notifications pushing to watch -- This requires a proprietary Apple service as well.
-- Uploading of [external resource packages](https://github.com/InfiniTimeOrg/InfiniTime/blob/develop/doc/gettingStarted/updating-software.md#updating-resources) (not yet implemented)
+### Partially implemented features:
+- System-wide notifications—implemented in [#2217](https://github.com/InfiniTimeOrg/InfiniTime/pull/2217), but not available in the main branch yet.
 
-### How to install it:
-InfiniLink is now available on the [App Store](https://apps.apple.com/us/app/infinilink/id1582318814)!
+### Currently non-functional features:
+- InfiniTime's navigation app—there is currently no API in Swift to access current directions unless the route is started from inside the app, which may not be practical for most users.
+- System-wide music controls—requires implementation of Apple Media Service (AMS).
+
+## Installation:
+- **Version 1.0.2** is accessible on the [App Store](https://apps.apple.com/us/app/infinilink/id1582318814).
+- **Version 1.1-beta** is accessible on [TestFlight](https://testflight.apple.com/join/B3PY5HUV).
+
+## License
+Released under [GPL-3.0](/LICENSE) by [@InfiniTimeOrg](https://github.com/InfiniTimeOrg).

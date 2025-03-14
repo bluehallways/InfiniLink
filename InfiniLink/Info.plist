@@ -20,6 +20,8 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppleMusicUsageDescription</key>
@@ -30,6 +32,28 @@
 	<string>This app uses bluetooth to communicate with your PineTime.</string>
 	<key>NSDownloadsFolderUsageDescription</key>
 	<string></string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>This app optionally uses Apple Health to communicate your heart rate and step count data to your PineTime.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>This app optionally uses Apple Health to write your heart rate and step count data.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app needs your location to receive local weather information when the app is in the background.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app needs your location to receive local weather information when the app is in the background.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs your location to receive local weather information.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>JetBrainsMono-Bold.ttf</string>
+		<string>JetBrainsMono-ExtraBold.ttf</string>
+		<string>JetBrainsMono-Light.ttf</string>
+		<string>JetBrainsMono-Regular.ttf</string>
+		<string>open_sans_light.ttf</string>
+		<string>BebasNeue-Regular.ttf</string>
+		<string>repetitionscrolling.ttf</string>
+		<string>7-Segment.ttf</string>
+		<string>Teko-Light.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -40,9 +64,12 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
+		<string>location</string>
 	</array>
 	<key>UILaunchScreen</key>
 	<dict/>
+	<key>UILaunchStoryboardName</key>
+	<string>Launch Screen.storyboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

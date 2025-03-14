@@ -7,10 +7,6 @@
 */
 
 // - HomeScreen
-"device_information" = "裝置資訊";
-"firmware_version" = "韌體版本： ";
-"model" = "型號： ";
-"update_stats" = "上線時間狀態";
 "last_disconnect" = "上次離線： ";
 "uptime" = "上線時間： ";
 "step_count" = "步數計數";
@@ -19,6 +15,8 @@
 "no_updates_available" = "無可用更新";
 "device_name" = "裝置名稱";
 "rename" = "重新命名";
+"disconnect_alert_title" = "您確定您想要從這裝置離線？";
+"save" = "儲存";
 
 // - SideMenu
 "home" = "主頁";
@@ -35,9 +33,12 @@
 // - HeartChart
 "bpm" = "BPM";
 "insufficient_heart_rate_data" = "沒有足夠的心率資料";
+"heart_rate_settings" = "心率設定";
+"oops" = "Oops!";
 
 // - BetteryChart
 "insufficient_battery_data" = "沒有足夠的電池資料";
+"battery_stats" = "電池狀態";
 
 // - StepsView
 "week" = "週";
@@ -66,11 +67,14 @@
 "enable_watch_notifications" = "開啟手錶通知";
 "notify_about_low_battery" = "低電量時通知";
 "send_notification_to_pinetime" = "傳送通知至 PineTime";
+"find_lost_device" = "尋找";
 "graph_styles" = "圖表類型";
 "filled_hrm_graph" = "填滿 HRM 圖表";
 "filled_battery_graph" = "填滿電池圖表";
+"enable_first_connect_notification" = "連線通知";
 "graph_data" = "圖表資料";
 "clear_all_hrm_chart_data" = "清除所有心率圖表資料";
+"clear_all_steps_chart_data" = "清除所有步數圖表資料";
 "clear_all_battery_chart_data" = "清除所有電池圖表資料";
 "onboarding_information" = "Onboarding 資訊";
 "open_onboarding_page" = "開啟 Onboarding 頁面";
@@ -78,17 +82,32 @@
 "debug_mode" = "除錯模式";
 "enable_debug_mode" = "開啟除錯模式";
 "debug_logs" = "除錯紀錄";
+"no_logs" = "沒有紀錄";
 "links" = "連結";
 "donations" = "捐款";
-
-// - ScanningPopover
-"connected_to" = "已連線至";
-"scanning" = "掃描中";
+"copy" = "Copy";
+"weather" = "天氣";
+"weather_style" = "天氣類型";
+"search_for_locations" = "搜尋位置";
+"find_location" = "使用上面的搜尋欄尋找\n 位置";
+"update_step_count_goal_on_watch_1" = "改變您的步數目標，請至設定";
+"update_step_count_goal_on_watch_2" = "且在這變更它。";
+"manually_sync_time" = "手動同步時間";
 
 // - BLEConnectView
 "available_devices" = "可用裝置";
 "waiting_for_bluetooth" = "等待藍芽中";
 "unnamed" = "未命名";
+"loading" = "載入中";
+"need_help_connecting" = "需要幫忙連線嗎？";
+"devices" = "裝置";
+"not_infinitime_device" = "似乎您選擇的裝置並沒有執行 InfiniTime。";
+"disconnect" = "斷線";
+"scanning" = "掃描中";
+"ok" = "OK";
+
+// - ConnectionHelpView
+"connection_help" = "連線幫助";
 
 // - ChartSettingsSheetMain
 "select_date_range" = "選擇日期範圍";
@@ -118,7 +137,7 @@
 "add_steps" = "增加步數";
 
 // - StepSettingsSheetGoalChange
-"change_step_count_goal" = "更改步數目標";
+"change_step_goal" = "更改步數目標";
 "enter_step_goal" = "輸入步數目標";
 "submit_new_step_goal" = "遞交新的步數目標";
 
@@ -131,30 +150,26 @@
 // - DownloadView
 "available_downloads" = "可用的下載";
 "firmware_download_links" = "韌體下載連結";
-
-// - SheetCloseButton
-"close" = "關閉";
+"software_update_available" = "有可用的軟體更新";
 
 // - WhatsNew
-"whats_new_in" = "什麼新鮮事在";
-"welcome_to_version" = "歡迎來到版本";
-"welcome_text" = "的 InfiniLink！我希望您喜歡在這版本的 app 新增的功能。若您有遇到任何情況或是您想看到的改變，請不要感覺有負擔的聯絡我！";
-
-// - WhatsNewBody
-"whats_new_body_1" = "新的 UI 介面！超級感謝 GitHub 上的 @wowieman 大修整個 UI介面。";
-"whats_new_body_2" = "我們現在已經上架到 App Store 囉！";
-"whats_new_body_3" = "一些新的本地化。 請注意並不是所有的本地化已經更新在新的 UI 上。若您可以幫忙本地化，請在 GitHub 上與我們聯絡，或是請不要感覺有負擔的提交一個本地化的 pull request。在這方面的任何幫忙都很感謝！";
+"whats_new_in" = "What's New in";
+"welcome_to_version" = "Welcome to version";
+"whats_new_1" = "UI 畫面已經完全更新！";
+"whats_new_2" = "Apple HealthKit 現在支援同步步數及心率資料到 Apple Health。";
+"whats_new_3" = "InfiniLink 使用者可以在手錶的藍芽檔案系統上傳及刪除檔案，也可以上傳外部的資源包。使用者也可以在 app 內，轉換圖片為 InfiniTime 支援的格式。";
+"whats_new_4" = "天氣支援也在這版本增加，使用 National Weather Service API (在 United States) 及 WeatherAPI API (非 United States 的使用者)。 天氣資料是使用 InfiniTime 的新簡單天氣服務推送。需要 InfiniTime 1.14 或更新。";
+"whats_new_5" = "這版本也包含一些新的語言本地化。請注意語言本地化並沒有完全處理好。若您可以幫忙協助，請更新這些語言本地化並提交一個 pull request！";
+"whats_new_6" = "這次特別感謝 @JenJell 在 Github 上的所有幫忙！";
 
 // - Onboarding
-"welcome_to_InfiniLink" = "🎉 歡迎使用 InfiniLink! 🎉";
-"onboarding_text" = "InfiniTime 的開放原始碼 iOS 夥伴 app！在您開始前，請確認允許此 app 可以使用藍芽。請跟我們反應任何您發現的情況，您遇過的 app 閃退，或是建議改變！您的回饋讓我們可以一起處理並擁有一個更好的夥伴 app。藉由 TestFlight 或是 GitHub、Matrix 或是 Mastodon 反應都歡迎 （在設定頁面的連結是可以使用的。）";
-
-// - OnboardingBody
-"other_notes" = "其他注意的事情：";
-"other_notes_1" = "- 通知目前尚未可以運作，因它需要 InfiniTime 實作 Apple 通知中心服務 (ANCS)協定。";
-"other_notes_2" = "- 音樂的控制在 InfiniTime 上可以運作，但是只有當您藉由蘋果的音樂 app 播放音樂的時候。 iOS 上系統的音樂控制，需要 InfiniTime 上實作專有軟體 Apple Media Service。在 app 的層級上，只能與 Apple Music 互動，並不能控制 podcasts、YouTube videos、系統音量等等，直到 AMS 在 InfiniTime 上增加。";
-"other_notes_3" = "- 您的 PineTime 目前只能一次維持一個藍芽的連線。若您在連線上有問題，請確認您的 PineTime 並未已經連線到另一個裝置，或連線到這個裝置的另一個 app。";
-"other_notes_4" = "- 若您的 PineTime 仍然未顯示為可用的裝置，請按住手錶的側邊按鈕重啟您的手錶直到您看到 Pine64 的松果 logo 為綠色時再放開按鈕。 Infinitime 的藍芽通知目前仍然還有狀況，開發者們正非常努力地處理。祝他們好運！";
+"welcome_to_InfiniLink" = "歡迎使用 InfiniLink!";
+"onboarding_text" = "The official open-source iOS companion app for InfiniTime! Before you begin, make sure to allow this app to use Bluetooth. Please report any issues that you find, crashes you experience, or suggested changes! Your feedback allows us to work together to have a great companion app. Reports are welcome through TestFlight, or through GitHub, Matrix, or Mastodon.";
+"other_notes" = "其他備註：";
+"other_notes_1" = "通知目前無作用，因為這需要實作 Apple Notification Center Service (ANCS) 協議在 InfiniTime。";
+"other_notes_2" = "The music controls do work in InfiniTime, but only if you're playing music through the Apple Music app. System-wide music control in iOS requires the proprietary Apple Media Service to be implemented in InfiniTime. At the app level, I can really only interact with Apple Music, and have no control over podcasts, YouTube videos, etc. until AMS is added to InfiniTime.";
+"other_notes_3" = "您的 InfiniTime 裝置目前只能一次維持一個藍芽連線。若您連線有問題，請確認您的 PineTime 沒有連線到其他裝置，或是其他這裝置的 app。";
+"other_notes_4" = "若您的 PineTime 仍然沒有顯示在可用的裝置內，請按住您手錶的側邊按鈕以重開您的手錶，直到您看到 Pine64 的松毬綠色 logo，再放開。";
 
 // - OnboardingDismissButton
 "dismiss_button" = "關閉";
@@ -164,6 +179,15 @@
 "current_firmware" = "目前韌體";
 "firmware_file" = "韌體檔案";
 "clear" = "清除";
+"update_requirement_1" = "為了更新，請確認";
+"update_requirement_2" = "的電池電量有超過 30%。";
+
+"not_release_builds" = "WARNING: These are not release builds! Install at your own risk.";
+"use_external_resources" = "使用外部資源";
+"use_software_update" = "使用軟體更新";
+"releases" = "Releases";
+"pr_title" = "PR";
+"pull_requests" = "GitHub Pull Requests";
 
 // - DFUWithoutBLE
 "bluetooth_not_available" = "藍芽未啟用";
@@ -190,11 +214,6 @@
 // - MusicController
 "not_playing" = "未播放";
 
-// - SideMenu
-"disconnect" = "斷線";
-"scanning" = "掃描";
-"connect" = "連線";
-
 // - ContentView
 "failed_set_time" = "設定時間失敗";
 "failed_set_time_description" = "您的手錶上設定時間有點問題。請跟您的手錶斷線再重新連線。";
@@ -212,6 +231,7 @@
 "welcome_text" = "歡迎。若您有 InfiniTime 裝置，\n 您可以在這配對它。";
 "connecting" = "連線中...";
 "start_pairing" = "開始配對";
+"stop_connecting" = "停止連線";
 "my_device" = "我的裝置";
 "favorites" = "最愛";
 "app_settings" = "App 佈景主題";
@@ -230,6 +250,8 @@
 "pinetime_not_available" = "PineTime 目前不可使用";
 "please_check_your_connection_and_try_again" = "請檢查您的連線並再試一次。";
 "download_and_install" = "下載並安裝";
+"recovery_mode" = "似乎您的裝置處於復原模式。";
+"exit_recovery_mode" = "為了離開復原模式，您需要安裝軟體更新。";
 
 "battery_level" = "電池電量";
 "battery_usage" = "電池用量";
@@ -240,9 +262,36 @@
 "currently_unavailable" = "目前不可使用";
 
 "software_version" = "軟體版本";
+"file_system_version" = "檔案系統版本";
 "model_name" = "型號";
 "autoconnect_to_this" = "自動連線至本裝置";
 "send_notification_to" = "傳送通知至";
 "connected_to" = "已連線至";
 
-// NSLocalizedString("", comment: "")
+"file_system" = "檔案系統";
+"update_external_resources" = "更新外部資源";
+"external_resources_info" = "外部資源是字體及圖片儲存在手錶不同的位置以最佳化儲存及記憶體的使用。";
+"success" = "成功!";
+"upload_files" = "上傳檔案";
+"upload_selected_files" = "上傳選擇的檔案";
+"new_folder" = "新資料夾";
+"create_folder" = "建立資料夾";
+"delete" = "刪除";
+"unknown" = "未知";
+"back" = "返回";
+"watch_settings" = "手錶設定";
+"display_timeout" = "顯示逾時";
+"time_format" = "時間格式";
+"hourly_chimes" = "整點報時";
+"brightness_level" = "亮度";
+
+"enable_weather_data" = "啟用天氣資料";
+"use_current_location" = "使用現在位置";
+"set_location" = "位置";
+"always_allow_location_services" = "總是允許使用現在位置";
+"loading_weather" = "載入天氣資料...";
+
+"youre_offline" = "您現在離線";
+"offline_desc" = "您現在離線。請連線到網路以繼續。";
+"offline" = "離線...";
+
